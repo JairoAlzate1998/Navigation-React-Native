@@ -36,9 +36,9 @@ export const styles = StyleSheet.create({
     marginHorizontal: 50,
   },
   menuTexto: {
-    fontSize: 20
+    fontSize: 20,
   },
-  menuBoton:{
-    marginVertical: 10
-  }
+  menuBoton: {
+    marginVertical: 10,
+  },
 });
