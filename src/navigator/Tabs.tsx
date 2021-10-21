@@ -4,6 +4,7 @@ import {Tab1Screen} from '../screens/Tab1Screen';
 import {Tab2Screen} from '../screens/Tab2Screen';
 import {StackNavigator} from './StackNavigator';
 import {colores} from '../theme/appTheme';
+import {Text} from 'react-native';
 
 const Tab = createBottomTabNavigator();
 
@@ -22,6 +23,23 @@ export const Tabs = () => {
         },
         tabBarLabelStyle: {
           fontSize: 15,
+        },
+        tabBarIcon: props => {
+          let iconName: string = '';
+          switch (route.name) {
+            case 'Tab1Screen':
+              iconName = 'T1';
+              break;
+
+            case 'Tab2Screen':
+              iconName = 'T2';
+              break;
+
+            case 'StackNavigator':
+              iconName = 'ST';
+              break;
+          }
+          return <Text style={{color: props.color}}>{iconName}</Text>;
         },
       })}>
       <Tab.Screen
