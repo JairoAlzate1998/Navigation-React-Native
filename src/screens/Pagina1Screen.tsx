@@ -3,6 +3,7 @@ import React from 'react';
 import {Button, Text, View} from 'react-native';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import {styles} from '../theme/appTheme';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 interface Props extends StackScreenProps<any, any> {}
 
@@ -27,6 +28,7 @@ export const Pagina1Screen = ({navigation}: Props) => {
               nombre: 'Pedro',
             })
           }>
+          <Icon name="body-outline" size={20} color="white" />
           <Text style={styles.botonGrandeTexto}>Pedro</Text>
         </TouchableOpacity>
         <TouchableOpacity
@@ -40,6 +42,7 @@ export const Pagina1Screen = ({navigation}: Props) => {
               nombre: 'Maria',
             })
           }>
+          <Icon name="woman-outline" size={20} color="white" />
           <Text style={styles.botonGrandeTexto}>Maria</Text>
         </TouchableOpacity>
       </View>

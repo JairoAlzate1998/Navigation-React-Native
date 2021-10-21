@@ -1,10 +1,10 @@
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {Tab1Screen} from '../screens/Tab1Screen';
-import {Tab2Screen} from '../screens/Tab2Screen';
 import {StackNavigator} from './StackNavigator';
 import {colores} from '../theme/appTheme';
-import {Text} from 'react-native';
+import { TopTabNavigator } from './TopTabNavigator';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 const Tab = createBottomTabNavigator();
 
@@ -28,18 +28,18 @@ export const Tabs = () => {
           let iconName: string = '';
           switch (route.name) {
             case 'Tab1Screen':
-              iconName = 'T1';
+              iconName = 'bandage-outline';
               break;
 
-            case 'Tab2Screen':
-              iconName = 'T2';
+            case 'TopTabNavigator':
+              iconName = 'basketball-outline';
               break;
 
             case 'StackNavigator':
-              iconName = 'ST';
+              iconName = 'bookmarks-outline';
               break;
           }
-          return <Text style={{color: props.color}}>{iconName}</Text>;
+          return <Icon name={iconName} size={20} color={props.color} />;
         },
       })}>
       <Tab.Screen
@@ -48,9 +48,9 @@ export const Tabs = () => {
         component={Tab1Screen}
       />
       <Tab.Screen
-        name="Tab2Screen"
+        name="TopTabNavigator"
         options={{title: 'Tab 2'}}
-        component={Tab2Screen}
+        component={TopTabNavigator}
       />
       <Tab.Screen
         name="StackNavigator"
