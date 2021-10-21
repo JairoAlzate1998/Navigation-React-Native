@@ -5,6 +5,7 @@ import {NavigationContainer} from '@react-navigation/native';
 //import { MenuLatertalBasico } from './src/navigator/MenuLateralBasico';
 import {MenuLatertal} from './src/navigator/MenuLateral';
 import {LogBox} from 'react-native';
+import { Tabs } from './src/navigator/Tabs';
 LogBox.ignoreLogs(['Reanimated 2']);
 const App = () => {
   return (
