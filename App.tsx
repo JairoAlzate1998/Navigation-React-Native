@@ -5,16 +5,23 @@ import {NavigationContainer} from '@react-navigation/native';
 //import { MenuLatertalBasico } from './src/navigator/MenuLateralBasico';
 import {MenuLatertal} from './src/navigator/MenuLateral';
 import {LogBox} from 'react-native';
-import { Tabs } from './src/navigator/Tabs';
+import {AuthProvider} from './src/context/AuthContext';
+//import { Tabs } from './src/navigator/Tabs';
 LogBox.ignoreLogs(['Reanimated 2']);
 const App = () => {
   return (
     <NavigationContainer>
-      {/*<StackNavigator/>*/}
-      {/*<MenuLatertalBasico/>*/}
-      <MenuLatertal />
+      <AppState>
+        <MenuLatertal />
+        {/*<StackNavigator/>*/}
+        {/*<MenuLatertalBasico/>*/}
+      </AppState>
     </NavigationContainer>
   );
+};
+
+const AppState = ({children}: any) => {
+  return <AuthProvider>{children}</AuthProvider>;
 };
 
 export default App;
